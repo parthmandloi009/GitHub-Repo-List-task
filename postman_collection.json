@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "e5a5f462-37e9-4e19-89ef-a48431551be9",
+		"name": "GitRepoApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetRepoListMongoString",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6001/?page=1&order=8&search=mongodb://localhost:27017&per_page=5&sort=stars",
+					"host": [
+						"localhost"
+					],
+					"port": "6001",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "order",
+							"value": "8"
+						},
+						{
+							"key": "search",
+							"value": "mongodb://localhost:27017"
+						},
+						{
+							"key": "per_page",
+							"value": "5"
+						},
+						{
+							"key": "sort",
+							"value": "stars"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
