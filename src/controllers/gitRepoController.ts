@@ -37,9 +37,7 @@ const gitRepoController: RequestHandler = async (req, res, next) => {
         }
         return res.status(SUCCESS).json({ data })
     } catch (e: any) {
-        // throw new CustomError('hello from error', 403)
-        //throw new Error('Hello from service error')
-        res.status(403).json({})
+        res.status(403).json({ message: 'Error getting', status: 403 })
     }
 }
 

@@ -11,18 +11,19 @@ export const fetchGitRepoList = async (
     per_page: string,
     sort: string
 ) => {
+    console.log('iiiiiiiiiiiii')
+
     const config = {
         headers: {
             Authorization: `Token ${process.env.GITHUB_ACCESS_KEY}`,
         },
     }
 
-    const url = `${process.env.GIT_URL}?q=${search}+in:file&page=${page}&per_page=${per_page}&order=${order}&sort=${sort}`
+    const url = `https://api.github.com/search/code?q=${search}+in:file&page=${page}&per_page=${per_page}&order=${order}&sort=${sort}`
 
     try {
-        const data = await axios.get(url, config)
-        return data
+        return await axios.get(url, config)
     } catch (e: any) {
-        throw new CustomError(e.message, FORBIDDEN)
+        console.log('error')
     }
 }

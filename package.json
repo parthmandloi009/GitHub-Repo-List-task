@@ -6,7 +6,7 @@
     "scripts": {
         "test": "mocha -r ts-node/register src/test/**/*.test.ts",
         "dev": "node ./dist/app.js",
-        "start": "ts-node ./src/app.ts",
+        "start": "nodemon --watch ts-node ./src/app.ts",
         "build": "npx tsc"
     },
     "keywords": [],
